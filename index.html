@@ -25,6 +25,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
@@ -33,21 +34,21 @@
 
       <!--9AM-->
         <div class="row">
-          <div class="col" id="timeSlot">
-            <span id="currentTime">09AM</span>
+          <div class="col" id="timeSlot" timedata="15">
+            <span id="calendarTime">09AM</span>
           </div>
-          <div class="col" id="event">
+          <div class="col" id="event9">
             Event
           </div>
           <div class="col">
-            <button type="button" class="btn btn-dark">Save</button>
+            <button type="button" class="btn btn-dark" >Save</button>
           </div>
         </div>
 
         <!--10AM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">10AM</span>
+            <span id="calendarTime">10AM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -60,7 +61,7 @@
         <!--11AM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">11AM</span>
+            <span id="calendarTime">11AM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -73,7 +74,7 @@
         <!--12PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">12PM</span>
+            <span id="calendarTime">12PM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -86,7 +87,7 @@
         <!--13PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">13PM</span>
+            <span id="calendarTime">13PM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -99,7 +100,7 @@
         <!--14PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">14PM</span>
+            <span id="calendarTime">14PM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -112,7 +113,7 @@
         <!--15PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">15PM</span>
+            <span id="calendarTime">15PM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -125,7 +126,7 @@
         <!--16PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">16PM</span>
+            <span id="calendarTime">16PM</span>
           </div>
           <div class="col" id="event">
             Event
@@ -138,7 +139,7 @@
         <!--17PM-->
         <div class="row">
           <div class="col">
-            <span id="currentTime">17PM</span>
+            <span id="calendarTime">17PM</span>
           </div>
           <div class="col" id="event">
             Event
