@@ -77,8 +77,9 @@ for(let i=0; i<timedataArray.length; i++) {
 
     } else if (time > currentHour) {
         $(event9).addClass('future');
-
     }
-}
+};
+
+
 
 
