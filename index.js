@@ -17,6 +17,12 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
     // compare it 
     // display the right color
 
+    //manually solve it for each manually//
+
+//save the input value to local storage for each event 
+
+//data-time for each button
+
 let currentTime = moment();
 
 let doo = $("#currentTime").text(currentTime.format("HH"));
@@ -32,9 +38,17 @@ function compareCalendarTimeAndCurrentTime () {
     console.log(timeSlot);
 
     if(ooo == timeSlot){
-        $('#event9').css('background-color', 'red');
+        $('#event9').addClass("future");
     }
 
 }
 
 compareCalendarTimeAndCurrentTime();
+
+
+let timeSlots = document.querySelectorAll("[timedata]");
+let timedataArray = Array.from(timeSlots).map(function(timeSlot) {
+  return timeSlot.getAttribute("timedata");
+});
+console.log(timedataArray);
+
