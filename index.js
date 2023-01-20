@@ -23,32 +23,62 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 //data-time for each button
 
+
+
+
+
+// console.log($("#timeSlot").attr('timedata'));
+
+// let timeSlot = $("#timeSlot").attr('timedata')
+
+// function compareCalendarTimeAndCurrentTime () {
+//     console.log(ooo);
+//     console.log(timeSlot);
+
+//     if(ooo == timeSlot){
+//         $('#event9').addClass("future");
+//     }
+
+// }
+
+// compareCalendarTimeAndCurrentTime();
+
+//This is the current hour//
+
 let currentTime = moment();
+//currentHourTime
 
-let doo = $("#currentTime").text(currentTime.format("HH"));
-
-let ooo = currentTime.format("HH");
-
-console.log($("#timeSlot").attr('timedata'));
-
-let timeSlot = $("#timeSlot").attr('timedata')
-
-function compareCalendarTimeAndCurrentTime () {
-    console.log(ooo);
-    console.log(timeSlot);
-
-    if(ooo == timeSlot){
-        $('#event9').addClass("future");
-    }
-
-}
-
-compareCalendarTimeAndCurrentTime();
+let currentHourTime = $("#currentTime").text(currentTime.format("HH"));
 
 
 let timeSlots = document.querySelectorAll("[timedata]");
+
+let currentHour = currentTime.format("HH");
+
+
 let timedataArray = Array.from(timeSlots).map(function(timeSlot) {
   return timeSlot.getAttribute("timedata");
 });
-console.log(timedataArray);
+
+// console.log(timedataArray);
+
+
+for(let i=0; i<timedataArray.length; i++) {
+    let time = timedataArray[i];
+    let currentDiv = $(`[timedata=${time}]`).closest('div'); //The .clostest finds the cloest ancestor div element of the seelcted element.
+         // let testDiv2 = $('[timedata');//This selects all timedata attrbutes and not the ones that specficially match the hour.
+
+    let event9 = currentDiv.siblings('#event9');//The siblings method will select the div element with the ID "event9" and will apply the css class based upon the conditions below.
+
+    if (time === currentHour) {
+        $(event9).addClass('present');
+    } else if (time < currentHour) {
+        $(event9).addClass('past');
+
+    } else if (time > currentHour) {
+        $(event9).addClass('future');
+
+    }
+}
+
 
