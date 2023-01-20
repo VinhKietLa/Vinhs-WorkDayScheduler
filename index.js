@@ -62,8 +62,15 @@ let saveBtn = document.querySelectorAll(".saveBtn");
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let currentSaveBtn = $(event.target);//This targets the button element and stores it in a variable.
+
     let textAreaValue = currentSaveBtn.closest('div.row').find('textarea#eventText').val();//This methods finds the closest div with the class row and .find, finds the textarea element with the id "eventText" and retrieves the value.
+
+    let timedataValue = currentSaveBtn.closest('div.row').find('#timeSlot').attr('timedata');
+
+    let textTimeEntry = localStorage.setItem(timedataValue, textAreaValue);
     console.log(textAreaValue);
+    console.log(timedataValue);
+
 });
 
 
@@ -73,7 +80,9 @@ $(".saveBtn").on("click", function (event) {
 
 //when user clicks on the events container, it should allow them to enter a text//[done]
 
-//when the user clicks save, it should take their input and store this into local storage//
+//when the user clicks save, it should take their input and store //
+
+// The variable needs to be stored as local storage.
 
 //upon page refresh, the users saved inputs should show//.
 
