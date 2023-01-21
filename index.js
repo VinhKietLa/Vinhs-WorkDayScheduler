@@ -3,8 +3,6 @@ let today = moment();
 
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
-
-
 //This is the current hour//
 
 let currentTime = moment();
@@ -12,7 +10,6 @@ let currentTime = moment();
 //currentHourTime
 
 let currentHour = currentTime.format("HH");
-
 
 
 //Gets all the timedata attributes in the html.
@@ -58,7 +55,6 @@ function saveBtnText(event) {
 
 let saveBtn = document.querySelectorAll(".saveBtn");
 
-
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let currentSaveBtn = $(event.target);//This targets the button element and stores it in a variable.
@@ -68,8 +64,6 @@ $(".saveBtn").on("click", function (event) {
     let timedataValue = currentSaveBtn.closest('div.row').find('#timeSlot').attr('timedata'); //This method finds the cloest div with the class row and .find, finds an element with the ID timeSlot with the attribute timedata and returns the values.
 
     let textTimeEntry = localStorage.setItem(timedataValue, textAreaValue);
-    console.log(textAreaValue);
-    console.log(timedataValue);
 
 });
 
@@ -85,6 +79,12 @@ $(document).ready(function() {
 
       }
   });
+
+//pseudocode//
+
+//Should I disable save button or change it to an edit button and vice-versa?
+
+
 
 // function showEvents() {
 
