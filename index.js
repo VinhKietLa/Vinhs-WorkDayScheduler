@@ -73,16 +73,40 @@ $(".saveBtn").on("click", function (event) {
 
 });
 
+$(document).ready(function() {
+    let eventText = document.querySelectorAll("#eventText");
+      for (let i = 0; i < timedataArray.length; i++) {
+        let time = timedataArray[i];
 
-function showEvents() {
-    let testArray = ["30"];
-    let storedEvent = localStorage.getItem(testArray);
-    console.log(storedEvent);
+        let storedValue = localStorage.getItem(time);
 
-    $('#eventText').text(storedEvent);
-}
+        console.log(storedValue);
+        $(eventText[i]).val(storedValue);
 
-showEvents();
+      }
+  });
+
+// function showEvents() {
+
+//     console.log(timedataArray);
+    
+//     for (let i = 0; i < timedataArray.length; i++) {
+//         let time = timedataArray[i];
+//         let storedEvent = localStorage.getItem(time);
+//         console.log(storedEvent);
+//         $('#eventText').text(storedEvent);
+
+//     }
+
+
+//     // let testArray = ["30"];
+//     // let storedEvent = localStorage.getItem(testArray);
+//     // console.log(storedEvent);
+
+//     // $('#eventText').text(storedEvent);
+// }
+
+// showEvents();
 
 
 //pseudocode//
