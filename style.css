@@ -31,8 +31,6 @@ textarea {
 .row {
   /* margin-bottom: 10px; */
   border-top: 1px solid white;
-
-
 }
 
 .hour {
@@ -71,6 +69,10 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+#eventContainer {
+  width: 50%;
+}
+
 #timeSlot {
   align-self: center;
   padding-right: 5px;
@@ -78,6 +80,27 @@ textarea {
 
 .row {
   padding-left: 0;
+}
+
+@media (min-width: 768px) { 
+
+  #timeSlot {
+    height: 200px;
+
+  }
+
+  #eventText {
+    height:100%;
+  }
+
+  #eventContainer {
+    width: 83.33333333%;
+  }
+
+  body {
+    font-size:18px;
+  }
+
 }
 
 @media (min-width: 992px) { 
@@ -88,6 +111,10 @@ textarea {
 
   #eventText {
     height:100%;
+  }
+
+  #eventContainer {
+    width: 83.33333333%;
   }
 
   body {
