@@ -65,13 +65,15 @@ $(".saveBtn").on("click", function (event) {
 
     let textAreaValue = currentSaveBtn.closest('div.row').find('textarea#eventText').val();//This methods finds the closest div with the class row and .find, finds the textarea element with the id "eventText" and retrieves the value.
 
-    let timedataValue = currentSaveBtn.closest('div.row').find('#timeSlot').attr('timedata');
+    let timedataValue = currentSaveBtn.closest('div.row').find('#timeSlot').attr('timedata'); //This method finds the cloest div with the class row and .find, finds an element with the ID timeSlot with the attribute timedata and returns the values.
 
     let textTimeEntry = localStorage.setItem(timedataValue, textAreaValue);
     console.log(textAreaValue);
     console.log(timedataValue);
 
 });
+
+
 
 
 
@@ -83,6 +85,8 @@ $(".saveBtn").on("click", function (event) {
 //when the user clicks save, it should take their input and store //
 
 // The variable needs to be stored as local storage.
+
+// Local storage has the timedata and textvalue data, I now need to workout how to get those items and display them in the events, right now when the page loads the textareavalue is empty but the items are still in local storage.
 
 //upon page refresh, the users saved inputs should show//.
 
