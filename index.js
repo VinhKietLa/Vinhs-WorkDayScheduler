@@ -74,7 +74,15 @@ $(".saveBtn").on("click", function (event) {
 });
 
 
+function showEvents() {
+    let testArray = ["30"];
+    let storedEvent = localStorage.getItem(testArray);
+    console.log(storedEvent);
 
+    $('#eventText').text(storedEvent);
+}
+
+showEvents();
 
 
 //pseudocode//
