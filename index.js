@@ -31,14 +31,15 @@ for(let i=0; i<timedataArray.length; i++) {
          // let testDiv2 = $('[timedata');//This selects all timedata attrbutes and not the ones that specficially match the hour.
 
     let eventContainer = currentDiv.siblings('#eventContainer');//The siblings method will select the div element with the ID "event9" and will apply the css class based upon the conditions below.
-
+    console.log(currentHour);
+    console.log(time);//timedata attr arrays
     if (time === currentHour) {
         $(eventContainer).addClass('present');
-    } else if (time < currentHour) {
-        $(eventContainer).addClass('past');
-
-    } else if (time > currentHour) {
+    } else if (currentHour < time) {
         $(eventContainer).addClass('future');
+
+    } else if (currentHour > time) {
+        $(eventContainer).addClass('past');
     }
 };
 
