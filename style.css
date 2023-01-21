@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 16;
   line-height: 1;
 }
 
@@ -9,9 +9,14 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   padding: 10px;
   width: 100%;
+}
+
+#eventContainer {
+  border-left: 2px solid black;
+
 }
 
 .jumbotron {
@@ -22,19 +27,11 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
 
 .row {
   /* margin-bottom: 10px; */
-  padding-bottom: 10px;
-  padding-top: 10px;
+  border-top: 1px solid white;
+
 
 }
 
@@ -76,4 +73,24 @@ textarea {
 
 #timeSlot {
   align-self: center;
+}
+
+.row {
+  padding-left: 0;
+}
+
+@media (min-width: 992px) { 
+
+  #timeSlot {
+    height: 200px;
+  }
+
+  #eventText {
+    height:100%;
+  }
+
+  body {
+    font-size:18px;
+  }
+
 }
