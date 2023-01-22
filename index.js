@@ -38,14 +38,7 @@ for (let i = 0; i < timedataArray.length; i++) {
   }
 }
 
-function saveBtnText(event) {
-  event.preventDefault();
-  let currentSaveBtn = event.target;
-
-  $(currentSaveBtn).closest("text-area");
-}
-
-let saveBtn = document.querySelectorAll(".saveBtn");
+let saveBtn = document.querySelectorAll(".saveBtn"); //This selects all the saveBtns.
 
 $(".saveBtn").on("click", function (event) {
   event.preventDefault();
@@ -61,17 +54,17 @@ $(".saveBtn").on("click", function (event) {
     .find("#timeSlot")
     .attr("timedata"); //This method finds the cloest div with the class row and .find, finds an element with the ID timeSlot with the attribute timedata and returns the values.
 
-  let textTimeEntry = localStorage.setItem(timedataValue, textAreaValue);
+  let textTimeEntry = localStorage.setItem(timedataValue, textAreaValue); //This stores the entry into local storage as a timedataValue and textAreaValue pairs.
 });
 
-$(document).ready(function () {
-  let eventText = document.querySelectorAll("#eventText");
+$(document).ready(function () { //This runs once the the html doc is ready using .ready//
+  let eventText = document.querySelectorAll("#eventText"); //selects all eventText IDs
   for (let i = 0; i < timedataArray.length; i++) {
     let time = timedataArray[i];
 
-    let storedValue = localStorage.getItem(time);
+    let storedValue = localStorage.getItem(time); //This gets the values stored in local storage. 
 
-    $(eventText[i]).val(storedValue);
+    $(eventText[i]).val(storedValue);//This prints the retrieved value from local storage and displays it in the textarea.
   }
 });
 
