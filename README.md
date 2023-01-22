@@ -15,6 +15,7 @@ In the past = grey, future = green and present = red.
 - conditional statements
 - DOM object
 - functions
+- Bootstrap
 
 ### Preview of the application
 
