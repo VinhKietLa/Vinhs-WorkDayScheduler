@@ -24,11 +24,12 @@ let timedataArray = Array.from(timeSlots).map(function (timeSlot) {
 // console.log(timedataArray);
 
 for (let i = 0; i < timedataArray.length; i++) {
-  let time = timedataArray[i];
+  let time = parseInt(timedataArray[i]);
   let currentDiv = $(`[timedata=${time}]`).closest("div"); //The .clostest finds the cloest ancestor div element of the selected element.
   // let testDiv2 = $('[timedata');//This selects all timedata attrbutes and not the ones that specficially match the hour.
   let eventContainer = currentDiv.siblings("#eventContainer"); //The siblings method will select the div element with the ID "eventContainer" and will apply the css class based upon the conditions below.
-
+  console.log(typeof currentHour);
+  console.log(typeof time);
   if (currentHour === time) {
     $(eventContainer).addClass("present");
   } else if (currentHour > time) {
